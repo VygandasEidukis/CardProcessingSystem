@@ -21,13 +21,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <Button x:Name="StartServer" Width="200" Height="30" Margin="0,5" Content="Start server"></Button>
+            <Button x:Name="StartServer" Width="200" Height="30" Margin="0,5" Content="Start server" IsEnabled="False"></Button>
             <Button x:Name="StopServer" Width="200" Height="30" Content="Stop server" IsEnabled="False"></Button>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
             <Button Click="GenerateCodes_OnClick" x:Name="GenerateCodes" Width="200" Height="30" Margin="0,5" Content="Generate codes"></Button>
-            <Button x:Name="UseCode" Width="200" Height="30" Margin="0,5" Content="Use code"></Button>
+            <Button x:Name="UseCode" Width="200" Height="30" Margin="0,5" Content="Use code" IsEnabled="False"></Button>
         </StackPanel>
 
         <RichTextBox x:Name="Debug" Grid.Row="1" Grid.Column="3"></RichTextBox>

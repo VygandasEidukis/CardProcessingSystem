@@ -74,7 +74,6 @@
     <Compile Include="Model\CodeProcessing.cs" />
     <Compile Include="Model\DiscountCard.cs" />
     <Compile Include="Model\RandomTextGenerator.cs" />
-    <Compile Include="Model\TcpServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

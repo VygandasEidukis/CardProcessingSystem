@@ -11,7 +11,6 @@ namespace Server.Model
 {
     public static class CodeProcessing
     {
-        //not compared to existing database
         public static async Task GenerateDiscountCodes(int ammount)
         {
             List<DiscountCard> discountCards = new List<DiscountCard>();
@@ -35,6 +34,7 @@ namespace Server.Model
             await ac.InsertMultipleCodes(convertedDiscountCards);
         }
 
+        //not compared to existing database
         private static List<DiscountCard> RemoveCommonCodeFetcher(List<DiscountCard> cards)
         {
             return cards.Distinct().ToList();
@@ -50,6 +50,12 @@ namespace Server.Model
             }
 
             return convertedDiscountCards;
+        }
+
+        public static async Task<bool> UseCodeRequest(string Code)
+        {
+            AccessContext ac = new AccessContext();
+            return await ac.UseCode(Code);
         }
     }
 }
